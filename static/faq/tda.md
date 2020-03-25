@@ -93,7 +93,7 @@ Las operaciones básicas que puede tener un iterador son:
   - crear
   - ver_dato
   - avanzar
-  - ¿esta_al_final?
+  - ¿finalizó?
   - destruir
 
 ### ¿Cómo se usan los iteradores de una estructura?
@@ -111,7 +111,7 @@ Considerando esta convención, la forma canónica de iterar una estructura es la
 ``` cpp
 estructura_iter_t* iter = estructura_iter_crear(estructura);
 
-while(!estructura_iter_al_final(iter))
+while(!estructura_iter_finalizo(iter))
 {
     void* dato = estructura_iter_ver_actual(iter);
     /* Usar dato. */
@@ -128,7 +128,7 @@ O usando la sintaxis de ciclos definidos de C:
 estructura_iter_t* iter;
 
 for(iter = estructura_iter_crear(estructura);
-  !estructura_iter_al_final(iter);
+  !estructura_iter_finalizo(iter);
   estructura_iter_avanzar(iter))
 {
     void* dato = estructura_iter_ver_actual(iter);

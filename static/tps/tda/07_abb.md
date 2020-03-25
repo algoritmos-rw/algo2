@@ -55,7 +55,7 @@ typedef struct abb_iter abb_iter_t;
 abb_iter_t *abb_iter_in_crear(const abb_t *arbol);
 bool abb_iter_in_avanzar(abb_iter_t *iter);
 const char *abb_iter_in_ver_actual(const abb_iter_t *iter);
-bool abb_iter_in_al_final(const abb_iter_t *iter);
+bool abb_iter_in_finalizo(const abb_iter_t *iter);
 void abb_iter_in_destruir(abb_iter_t* iter);
 ```
 Contamos con un [script de pruebas](https://github.com/algoritmos-rw/algo2_abb_test/releases) que pueden ejecutar para verificar que la estructura que implementaron funciona correctamente. De todas formas, al igual que en entregas anteriores, deben realizar sus propias pruebas (pueden tomar las pruebas del hash como referencia, ya que el comportamiento de ambas estructuras es muy similar).
